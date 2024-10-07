@@ -2,6 +2,12 @@
 
 Async client to run simultaneous requests against the Path of Exile API without triggering rate limiting
 
+# Installation
+
+```
+pip install poe-async-client
+```
+
 # Example usage
 
 ```python
