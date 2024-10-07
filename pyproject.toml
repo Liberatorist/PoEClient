@@ -1,6 +1,6 @@
 [project]
 name = "poe-async-client"
-version = "0.0.3"
+version = "0.0.4"
 authors = [
   { name="Liberatorist", email="Liberatorist@gmail.com" },
 ]
