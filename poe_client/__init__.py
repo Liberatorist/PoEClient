@@ -1,1 +1,1 @@
-from poe_client import PoeClient
+from .client.poe_client import PoEClient

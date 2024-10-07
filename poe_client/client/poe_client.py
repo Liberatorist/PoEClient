@@ -1,5 +1,5 @@
 from .client import AsyncHttpClient
-from .schema.client_schema import *
+from ..schema.client_schema import *
 
 
 class PoEClient(AsyncHttpClient):

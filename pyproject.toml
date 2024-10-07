@@ -1,12 +1,12 @@
 [project]
 name = "poe-async-client"
-version = "0.0.4"
+version = "0.0.5"
 authors = [
   { name="Liberatorist", email="Liberatorist@gmail.com" },
 ]
 description = "Async client to run simultaneous requests against the Path of Exile API without triggering rate limiting"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.11"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License"
