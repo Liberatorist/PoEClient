@@ -12,7 +12,7 @@ pip install poe-async-client
 
 ```python
 import asyncio
-from poe_async_client.poe_client import PoEClient
+from poe_client import PoEClient
 
 async def fetch_stash_changes_simultaneously():
     client = PoEClient(
