@@ -1,0 +1,21 @@
+[project]
+name = "poe-async-client"
+version = "0.0.3"
+authors = [
+  { name="Liberatorist", email="Liberatorist@gmail.com" },
+]
+description = "Async client to run simultaneous requests against the Path of Exile API without triggering rate limiting"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+dependencies = [
+  "aiohttp"
+]
+keywords = ["Path of Exile", "PoE", "API", "Client", "GGG"]
+
+[project.urls]
+Homepage = "https://github.com/Liberatorist/PoEClient"
+Issues = "https://github.com/Liberatorist/PoEClient/issues"

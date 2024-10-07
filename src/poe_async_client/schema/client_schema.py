@@ -1,6 +1,6 @@
 from typing import Literal, NotRequired, Optional, TypedDict
 
-from schema.schema import *
+from .schema import *
 
 PvPMatchType = Literal["upcoming", "season", "team"]
 LadderSort = Literal["xp", "depth", "depthsolo", "ancestor", "time", "score",

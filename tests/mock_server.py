@@ -75,8 +75,8 @@ async def handle_request(request):
 
     # Check if currently in timeout
     if max(retry_after) > 0:
-        print(f"Rate limit timeout for token {token} on endpoint {
-              endpoint}. Retry after {max(retry_after)} seconds.")
+        print(
+            f"Rate limit timeout for token {token} on endpoint {endpoint}. Retry after {max(retry_after)} seconds.")
         return web.json_response({'error': 'Too Many Requests'}, status=429, headers=headers)
 
     # Check max requests per second
@@ -84,16 +84,16 @@ async def handle_request(request):
     recent_requests = [timestamp for timestamp in request_timestamps[token]
                        [endpoint] if timestamp > period_start]
     if len(recent_requests) >= MAX_REQUESTS_PER_SECOND:
-        print(f"Max requests per second exceeded for token {token} on endpoint {
-              endpoint}. Retry after {retry_after} seconds.")
+        print(
+            f"Max requests per second exceeded for token {token} on endpoint {endpoint}. Retry after {retry_after} seconds.")
         return web.json_response({'error': 'Too Many Requests'}, status=429, headers=headers)
 
     # Track the request
     request_timestamps[token][endpoint].append(now)
 
     # Return a successful response
-    print(f"Request successful for token {token} on endpoint {
-          endpoint}. Current state: {headers['X-Rate-Limit-Account-State']}")
+    print(
+        f"Request successful for token {token} on endpoint {endpoint}. Current state: {headers['X-Rate-Limit-Account-State']}")
     await asyncio.sleep(1)  # Simulate processing time
     return web.json_response({'message': 'Request successful'}, headers=headers)
 

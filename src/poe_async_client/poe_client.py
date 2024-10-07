@@ -1,5 +1,5 @@
-from client import AsyncHttpClient
-from schema.client_schema import *
+from .client import AsyncHttpClient
+from .schema.client_schema import *
 
 
 class PoEClient(AsyncHttpClient):
@@ -323,7 +323,7 @@ class PoEClient(AsyncHttpClient):
                 "client_id": client_id,
                 "client_secret": client_secret,
                 "scope": scope
-            },  
+            },
             headers={"Content-Type": "application/x-www-form-urlencoded"}
         )
 
